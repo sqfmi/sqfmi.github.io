@@ -1,0 +1,79 @@
+
+---
+import { Image } from "astro:assets";
+
+
+
+
+
+const { index, title, img, alt, description } = Astro.props;
+---
+<div
+  id="accordion__item"
+  class=` accordion__item group h-[160px] overflow-hidden w-full transition-all duration-500 mb-[30px] pixpix  ${index === 1 ? 'bg-white' : index === 2 ? 'bg-green' :  'bg-dark  text-white'}`
+  
+>
+  <button
+    class="accordion__toggle w-full h-[160px] flex items-center justify-between p-[60px] cursor-pointer"
+    id={`${title} accordion__item menu button`}
+    aria-expanded="false"
+    aria-controls={`${title} accordion__item menu content`}
+  >
+    <div class="flex items-center gap-[25px]">
+      <span class="hidden sm:block font-light uppercase sm:text-3xl ">{title}</span>
+     
+      </div>
+    <div
+      class="bg-white w-[40px] h-[40px] flex justify-center items-center pixpix"
+    >
+      <div
+        class="accordion__icon h-10 w-10 transition-transform duration-300 flex justify-center items-center relative"
+        aria-hidden="true"
+      >
+      </div>
+    </div>
+  </button>
+  <div
+    id={`${title} accordion__item menu content`}
+    aria-labelledby={`${title} accordion__item menu button `}
+    class="accordion__content px-[60px]"
+  >
+    <div class="w-full h-[2px] bg-black"></div>
+    <p class="prose mb-4 mt-1 max-w-full pt-5 pb-[60px] transition-[height]">
+      {description}
+    </p> <picture>
+      <Image
+        src={img}        
+        alt={alt}
+
+      />
+    </picture>
+  </div>
+</div>
+<style>
+  .accordion__icon::before,
+  .accordion__icon::after {
+    content: "";
+    position: absolute;
+    background-color: black;
+    transition: opacity 0.3s ease;
+  }
+
+  .accordion__icon::before {
+    width: 100%;
+    height: 6px; /* Increased from 2px to 6px */
+    left: 0;
+    top: calc(50% - 3px); /* Adjusted to center the thicker line */
+  }
+
+  .accordion__icon::after {
+    width: 6px; /* Increased from 2px to 6px */
+    height: 100%;
+    left: calc(50% - 3px); /* Adjusted to center the thicker line */
+    top: 0;
+  }
+
+  .accordion__icon.collapsed::after {
+    opacity: 0;
+  }
+</style>

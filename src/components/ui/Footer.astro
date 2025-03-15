@@ -1,0 +1,118 @@
+---
+import { Image } from "astro:assets";
+import Facebook from "../../assets/facebook.svg";
+import Instagram from "../../assets/instagram.svg";
+import Bluesky from "../../assets/bluesky.svg";
+import Logo from "../../assets/logo-alt.svg";
+import Twitter from "../../assets/twitter.svg";
+import Youtube from "../../assets/youtube.svg";
+
+const logos = [
+  { name: "Instagram", src: Instagram, link: "https://www.instagram.com/sqfmi/" },
+  { name: "Bluesky", src: Bluesky, link: "https://bsky.app/profile/sqfmi.com" },
+  { name: "Twitter", src: Twitter, link: "https://twitter.com/sqfmi" },
+  { name: "Youtube", src: Youtube, link: "https://www.youtube.com/@sqfmi" },
+];
+
+const links = [
+  { name: "Badgy", href: "https://badgy.sqfmi.com/" },
+  { name: "Watchy", href: "https://watchy.sqfmi.com/" },
+  { name: "Beepy", href: "https://beepy.sqfmi.com/" },
+
+];
+---
+
+<section id="contact" class="sm:px-5 bg-dark mt-5 mx-[-20px] border-t-4 border-[#333531]">
+  <div class="w-full max-w-[1280px] mx-auto">
+    <div
+      class="px-[15px] text-white py-[55px]"
+    >
+      <div>
+        <div class="flex flex-col lg:flex-row gap-7 items-top mb-12 justify-between">
+      <div>
+          <picture >
+                    <a href="#home">
+                      <Image src={Logo}S alt="Squarofumi Logo" />
+                    </a>
+      </picture>
+           
+      <ul class="flex flex-row mt-5 gap-5">
+        {
+          links.map((link) => {
+            return (
+              <li class="text-left">
+                <a class="sqfmifootlink" href={link.href}>
+                  {link.name}
+                </a>
+              </li>
+            );
+          })
+        }
+      </ul>
+    </div>     
+                
+                     <div>
+                      <h3 class="mb-5 font-light">HONG KONG</h3>
+                      <div class="flex flex-col justify-between gap-4">
+                   
+                        <span>
+                          B3 6/F Block B<br>
+                          Proficient Industrial Centre<br>
+                          6 Wang Kwun Rd<br>
+                          Kowloon Bay, KLN<br>
+                          Hong Kong
+                        </span>
+                      </div>
+                     </div>
+                     <div>
+                      <h3 class="mb-5 font-light">NEW YORK</h3>
+                      <div class="flex flex-col justify-between gap-4">
+                  
+                        <span>
+                          524 Broadway<br>
+                          New York, NY<br>
+                          10012<br>
+                          USA
+                        </span>
+                      </div>
+                     </div>
+
+                     <div>
+                      <h3 class="mb-5 font-light uppercase">Contact us:</h3>
+                      <div class="flex flex-col justify-between gap-4">
+                        <span> Email: contact@sqfmi.com </span>
+                      </div>
+                     </div>
+
+               
+                </div>
+
+                
+        <div class="flex flex-col lg:flex-row gap-7 items-center justify-between">
+          <span>Copyright © 2025 Squarofumi Limited</span>
+      
+          <ul class="flex gap-5">
+            {
+              logos.map((logo) => {
+                return (
+                  <li>
+                    <a href={logo.link} target="_blank">
+                      <picture>
+                        <Image src={logo.src} alt={logo.name} />
+                      </picture>
+                    </a>
+                  </li>
+                );
+              })
+            }
+          </ul>
+        </div>
+
+        
+      </div>
+
+
+  
+    </div>
+  </div>
+</section>

@@ -1,0 +1,273 @@
+@import "/node_modules/pixel-borders/src/styles/pixel-borders.scss";
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.sqfmimenu{font-size: 25px; transition:color 0.3s ; color: #b3b3b3; }
+.sqfmimenu:hover{color: #b2c39c; }
+.sqfmifootlink{ transition:color 0.3s ;color: #b2c39c;}
+.sqfmifootlink:hover{color: #b3b3b3; }
+.sqfmifg{ color: #b2c39c;}
+@layer base {
+  @font-face {
+    font-family: "Grotesk";
+    src: url("/fonts/Coda-Regular.ttf"), format("ttf");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Grotesk";
+    src: url("/fonts/Tektur-Medium.ttf"), format("ttf");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  @font-face {
+    font-family: "Grotesk";
+    src: url("/fonts/Doto-Bold.ttf"), format("ttf");
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  :root {
+    --green: #b2c39c;
+    --black: #333531;
+    --dark:  #535551;
+    --white: #b3b3b3;
+  }
+
+  @layer base {
+    * {
+      box-sizing: border-box;
+      font-family: "Grotesk", sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-size: 20px;
+      background-color: #6d6d6d;
+      color:#2b2b2b;
+    background-image: url(/src/assets/pixelaa-01.png);
+    background-size: 1000px;
+
+    }
+
+    p {
+      font-size: 1.2rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+      line-height: 120%;
+      font-weight: 200;
+     
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 500;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+
+    h4 {
+      font-size: 1rem;
+      font-weight: 200;
+    }
+    button {
+      text-transform: uppercase;
+    }
+    @media (max-width: 640px) {
+      body {
+        font-size: 16px;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      h1 {
+        font-size: 2.688rem;
+      }
+
+      h2 {
+        font-size: 2.25rem;
+      }
+
+      h3 {
+        font-size: 1.625rem;
+      }
+
+      h4 {
+        font-size: 1.125rem;
+      }
+
+     
+    }
+  }
+
+  @layer components {
+    .btn-primary { 
+      @apply bg-dark text-white px-[35px] py-5 transition-all duration-200;
+      @include pixel-borders(
+        $corner-size: 2,
+        $border-size: 4px,
+        $border-color: #333531,
+        
+      );
+    }
+    .btn-primary:hover {
+      @apply bg-green text-black transform ;
+      
+    }
+
+    .btn-secondary {
+      @apply bg-transparent text-black px-[35px] py-5 transition-all duration-200;
+      @include pixel-borders(
+        $corner-size: 2,
+        $border-size: 4px,
+        $border-color: #333531,
+        
+      );
+    }
+    .btn-secondary:hover {
+      @apply bg-black text-white border-green transform ;
+    }
+
+    .btn-tertiary {
+      @apply bg-green text-black px-[35px] py-5 transition-all duration-200;
+      @include pixel-borders(
+        $corner-size: 2,
+        $border-size: 4px,
+        $border-color: #333531,
+        
+      );
+
+    }
+    .btn-tertiary:hover {
+      @apply bg-white text-black transform ;
+    }
+
+    .greenhead {
+      @apply bg-green text-black  px-[7px];
+      @include pixel-borders(
+        $corner-size: 2,
+        $border-size: 4px,
+        $border-color: #333531,
+        
+        
+      );
+    }
+
+    .whitehead {
+      @apply bg-white text-black  px-[7px];
+      @include pixel-borders(
+        $corner-size: 2,
+        $border-size: 4px,
+        $border-color: #333531,
+        
+      );
+    }
+
+    .blackhead {
+      @apply bg-dark text-white px-[7px];
+      @include pixel-borders(
+        $corner-size: 2,
+        $border-size: 4px,
+        $border-color: #333531,
+        
+      );
+      
+     
+    }    
+  
+    .pkbottom {margin-bottom:4px}
+
+
+        .pixpix {
+          @include pixel-borders(
+            $corner-size: 2,
+            $border-size: 4px,
+        $border-color: #ff0000,
+            
+          );
+          
+        }
+        .pixpix2 {
+            @include pixel-borders(
+              $corner-size: 2,
+              $border-size: 4px,
+              $border-color: #535551,
+              
+            );
+            
+          }
+          .pixpixb {
+            @include pixel-borders(
+              $corner-size: 2,
+              $border-size: 10px,
+              $border-color: #535551,
+              $border-inset-color: false,
+              
+            );
+            
+          }
+          .pixpixw {
+            @include pixel-borders(
+              $corner-size: 2,
+              $border-size: 4px,
+              $border-color: #333531,
+              
+            );
+            
+          }
+          .pixpix0g {
+            @include pixel-borders(
+              $corner-size: 2,
+              $border-size: 4px,
+          $border-color: #333531,
+              
+            );
+            
+          }
+         
+          .pixpix0w {
+            @include pixel-borders(
+              $corner-size: 2,
+              $border-size: 4px,
+          $border-color: #333531,
+              
+            );
+            
+          }
+          .pixpix0d {
+            @include pixel-borders(
+              $corner-size: 2,
+              $border-size: 4px,
+          $border-color: #333531,
+              
+            );
+            
+          }
+         
+
+
+          
+    
+ 
+  }
+}
+

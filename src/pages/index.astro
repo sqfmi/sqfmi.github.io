@@ -1,0 +1,21 @@
+---
+
+import Hero from "../components/sections/Hero.astro";
+import Proposal from "../components/sections/Proposal.astro";
+import Services from "../components/sections/Services.astro";
+import MainLayout from "../layouts/MainLayout.astro";
+import "../styles/globals.css";
+import "../styles/globals.scss";
+---
+
+<MainLayout
+  title="Squarofumi - Design & Engineering"
+  description="Squarofumi (SQFMI) creates customizable open-source hardware that empowers makers, developers, and engineers to innovate and experiment. Through its cutting-edge devices, Squarofumi helps bring new ideas to life while pushing the limits of technology."
+>
+  <Hero />
+  <Proposal />
+
+  <Services />
+
+
+</MainLayout>

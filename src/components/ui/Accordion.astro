@@ -1,0 +1,50 @@
+---
+import AccordionItem from "./AccordionItem.astro";
+import { Image } from "astro:assets";
+
+import c1 from "../../assets/pics/card-pic1.png";
+import c2 from "../../assets/pics/card-pic2.png";
+import c3 from "../../assets/pics/card-pic3.png";
+
+const content = [
+{
+    index: 1,
+    title: "Badgy",
+    img: c1,
+    alt:1,
+    description:
+"Badgy is a programmable e-paper badge designed for dynamic displays of messages, images, and real-time data. Ideal for events, conferences, and IoT applications, Badgy offers a low-power, versatile solution for digital name tags and more.",
+  },
+  {
+    index: 2,
+    title: "Watchy",
+    img: c2,
+    alt:1,
+    description:
+"Watchy is a fully customizable e-paper smartwatch powered by an ESP32 chip. With open-source hardware and firmware, it’s the ideal platform for developers to create custom watch faces, integrate sensors, and build unique wearable applications.",  
+},
+  {
+    index: 3,
+    title: "Beepy",
+    img: c3,
+    alt:1,
+    description:
+      "Beepy is a compact, hackable computing device featuring an e-paper display and versatile input options. Designed for developers, it serves as a portable programming interface, IoT controller, or customizable terminal for various applications. sit amet consectetur adipisicing elit.During the initial consultation, we will discuss your business goals and objectives, target audience, and current marketing efforts. This will allow us to understand your needs and tailor our services to best fit your requirements. ",
+  },
+];
+---
+
+{
+  content.map((item) => {
+    return (
+      <AccordionItem
+        index={item.index}
+        title={item.title}
+        description={item.description}
+        img={item.img}
+        alt={item.alt}
+
+      />
+    );
+  })
+}

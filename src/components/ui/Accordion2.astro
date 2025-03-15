@@ -1,0 +1,50 @@
+---
+import AccordionItem from "./AccordionItem2.astro";
+import { Image } from "astro:assets";
+
+import c1 from "../../assets/pics/card-pic1.png";
+import c2 from "../../assets/pics/card-pic2.png";
+import c3 from "../../assets/pics/card-pic3.png";
+
+const content = [
+{
+    index: 1,
+    title: "The Microsoft Garage",
+    img: c1,
+    alt:1,
+    description:
+"Badgy is a programmable eSquarofumi collaborated with Microsoft Garage to develop an innovative e-paper badge, providing participants with a low-power, customizable display to showcase project details and personalize their experience.-ink badge designed for dynamic displays of messages, images, and real-time data. Ideal for events, conferences, and IoT applications, Badgy offers a low-power, versatile solution for digital name tags and more.",
+  },
+  {
+    index: 2,
+    title: "Oracle Code Card",
+    img: c2,
+    alt:1,
+    description:
+"Squarofumi contributed to the design of the Oracle Code Card, a compact developer tool that integrates software and hardware for interactive coding experiences, enabling users to explore cloud technologies and programming concepts.",  
+},
+  {
+    index: 3,
+    title: "For All Mankind (Apple TV+)",
+    img: c3,
+    alt:1,
+    description:
+      "Squarofumi custom-designed a version of Watchy for For All Mankind, the Apple TV+ series that reimagines the global space race. This collaboration brought open-source hardware into a retro-futuristic setting, showcasing its adaptability for creative storytelling and prop design. ",
+  },
+];
+---
+
+{
+  content.map((item2) => {
+    return (
+      <AccordionItem
+        index={item2.index}
+        title={item2.title}
+        description={item2.description}
+        img={item2.img}
+        alt={item2.alt}
+
+      />
+    );
+  })
+}

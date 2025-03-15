@@ -1,0 +1,15 @@
+---
+const { isUnderline } = Astro.props;
+---
+
+{
+  isUnderline ? (
+    <div class="">
+      <slot />
+    </div>
+  ) : (
+    <div class="">
+      <slot />
+    </div>
+  )
+}

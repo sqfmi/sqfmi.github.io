@@ -1,0 +1,44 @@
+---
+import { Image } from "astro:assets";
+import Card from "../ui/Card.astro";
+import Section from "./Section.astro";
+
+const cards = [
+  {
+    index: 0,
+    title:
+      "Suspendisse vitae rhoncus sapien. Etiam neque dui, malesuada vel turpis id, scelerisque hendrerit metus. Morbi finibus tincidunt auctor. Nunc viverra risus id dolor ultrices fringilla. Nam ut nisi urna. Proin feugiat mi at facilisis sagittis. Mauris semper purus lacus, et mattis dui feugiat et. Phasellus porta pellentesque dolor",
+    link: "https://google.com",
+  },
+];
+
+import larrow from "../../assets/icon3.svg";
+import SectionTitle from "../ui/SectionTitle.astro";
+---
+
+<Section id="cases">
+  <SectionTitle
+    sectionTitle="Case Studies"
+    description="Explore Real-Life Examples of Our Proven Digital Marketing Success through Our Case Studies"
+  />
+  <div class="flex flex-col lg:flex-row justify-between p-1">
+    {
+      cards.map((card) => (
+        <Card>
+          <div class="flex p-[60px] h-full bg-dark text-white pixpix m-[1px]">
+            <div class="flex flex-col gap-5">
+              <p>{card.title}</p>
+              <a href={card.link} class="flex items-center gap-[15px]">
+                <span class="text-green">Case Info</span>
+                <picture>
+                  <Image src={larrow} alt="Arrow pointing up right" />
+                </picture>
+              </a>
+            </div>
+          </div>
+        </Card>
+      ))
+    }
+    
+  </div>
+</Section>

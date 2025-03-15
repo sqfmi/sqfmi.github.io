@@ -1,0 +1,113 @@
+---
+import SectionTitle from "../ui/SectionTitle.astro";
+import ServiceCard from "../ui/ServiceCard.astro";
+import Section from "./Section.astro";
+
+import c1 from "../../assets/pics/epseps-01.svg";
+import c2 from "../../assets/pics/epseps-02.svg";
+import c3 from "../../assets/pics/epseps-03.svg";
+import c4 from "../../assets/pics/epseps-04.svg";
+import c5 from "../../assets/pics/epseps-05.svg";
+import c6 from "../../assets/pics/epseps-06.svg";
+import { number } from "astro/zod";
+
+const cards = [
+  {
+    index: 1,
+    number: 1,
+    
+    titleTop: "Products",
+    title: "Badgy",
+    titleBottom: "Badgy is a programmable e-paper badge designed for dynamic displays of messages, images, and real-time data. Ideal for events, conferences, and IoT applications, Badgy offers a low-power, versatile solution for digital name tags and more.",
+    img: c1,
+    alt: "Badgy",
+    link: "http://badgy.sqfmi.com/",
+    description: "The Customizable E-Ink Badge",
+  },
+
+  {
+    index: 3,
+    number: 2,
+    titleTop: "Collaborations",
+    title: "Oracle Code Card",
+    titleBottom: "Suspendisse vitae rhoncus sapien. Etiam neque dui, malesuada vel turpis id, scelerisque hendrerit metus. Morbi finibus tincidunt auctor. Nunc viverra risus id dolor ultrices fringilla. Nam ut nisi urna. Proin feugiat mi at",  
+    img: c4,
+    alt: "Oracle Code Card",
+    link: "https://google.com",
+    description: "A Hands-On Coding Experience for Developers",
+  },
+  {
+    index: 3,
+    number: 2,
+    titleTop: "Collaborations",
+    title: "Microsoft Garage",
+    titleBottom: "Squarofumi collaborated with Microsoft Garage to develop an innovative hackable e-ink badge, providing participants with a low-power, customizable display to showcase project details and personalize their experience.",
+    img: c5,
+    alt: "Microsoft Garage",
+    link: "https://google.com",
+    description: "E-Ink Badge for Creative Exploration",
+  },
+  {
+    index: 3,
+    number: 2,
+    titleTop: "Products",
+    title: "Watchy",
+    titleBottom: "Watchy is a fully customizable e-paper smartwatch powered by an ESP32 chip. With open-source hardware and firmware, it’s the ideal platform for developers to create custom watch faces, integrate sensors, and build unique wearable applications.",  
+    img: c2,
+    alt: "Watchy",
+    link: "http://watchy.sqfmi.com",
+    description: "The Open-Source E-Ink Watch",
+  },
+
+  {
+    index: 1,
+    number: 1,
+    titleTop: "Collaborations",
+    title: "For All Mankind",
+    titleBottom: "Squarofumi custom-designed a version of Watchy for For All Mankind, the Apple TV+ series that reimagines the global space race. This collaboration brought open-source hardware into a retro-futuristic setting, showcasing its adaptability for creative storytelling and prop design. ",
+    img: c6,
+    alt: "FAM",
+    link: "https://google.com",
+    description: "Custom Watchy for a Visionary Sci-Fi Series",
+  },
+  {
+    index: 3,
+    number: 2,
+    titleTop: "Products",
+    title: "Beepy",
+    titleBottom: "Beepy is Suspendisse vitae rhoncus sapien. Etiam neque dui, malesuada vel turpis id, scelerisque hendrerit metus. Morbi finibus tincidunt auctor. Nunc viverra risus id dolor ultrices fringilla. Nam ut nisi urna. Proin feugiat mi at facilisis sa",
+    img: c3,
+    alt: "SEO",
+    link: "https://beepy.sqfmi.com/",
+    description: "The Pocket-Sized Hardware Terminal",
+  },
+];
+
+const description =
+  "";
+---
+
+<Section id="product">
+
+  
+  <div class="mt-[40px] mb-5">
+  
+    <div class="grid grid-cols-2 gap-10">
+      {
+        cards.map((card) => (
+          <ServiceCard
+            index={card.index}
+            title={card.title}
+            titleTop={card.titleTop}
+            titleBottom={card.titleBottom}
+            img={card.img}
+            alt={card.alt}
+            link={card.link}
+            description={card.description}
+            number={card.number}
+          />
+        ))
+      }
+    </div>
+  </div>
+</Section>
