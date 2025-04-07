@@ -1,15 +1,14 @@
 ---
 import { Image } from "astro:assets";
-import Facebook from "../../assets/facebook.svg";
+import Bsky from "../../assets/bluesky.svg";
 import Instagram from "../../assets/instagram.svg";
-import Bluesky from "../../assets/bluesky.svg";
 import Logo from "../../assets/logo-alt.svg";
 import Twitter from "../../assets/twitter.svg";
 import Youtube from "../../assets/youtube.svg";
 
 const logos = [
+  { name: "Bsky", src: Bsky, link: "https://bsky.app/profile/sqfmi.com" },
   { name: "Instagram", src: Instagram, link: "https://www.instagram.com/sqfmi/" },
-  { name: "Bluesky", src: Bluesky, link: "https://bsky.app/profile/sqfmi.com" },
   { name: "Twitter", src: Twitter, link: "https://twitter.com/sqfmi" },
   { name: "Youtube", src: Youtube, link: "https://www.youtube.com/@sqfmi" },
 ];
@@ -22,7 +21,7 @@ const links = [
 ];
 ---
 
-<section id="contact" class="sm:px-5 bg-dark mt-5 mx-[-20px] border-t-4 border-[#333531]">
+<section id="contact" class="sm:px-5 bg-dark mt-5  border-t-4 border-[#333531]">
   <div class="w-full max-w-[1280px] mx-auto">
     <div
       class="px-[15px] text-white py-[55px]"
@@ -32,7 +31,7 @@ const links = [
       <div>
           <picture >
                     <a href="#home">
-                      <Image src={Logo} alt="Squarofumi Logo" />
+                      <Image src={Logo}S alt="Squarofumi Logo" />
                     </a>
       </picture>
            
@@ -70,7 +69,7 @@ const links = [
                   
                         <span>
                           524 Broadway<br>
-                          New York, NY<br>
+                          New York NY,<br>
                           10012<br>
                           USA
                         </span>
@@ -81,6 +80,8 @@ const links = [
                       <h3 class="mb-5 font-light uppercase">Contact us:</h3>
                       <div class="flex flex-col justify-between gap-4">
                         <span> Email: contact@sqfmi.com </span>
+                  
+                
                       </div>
                      </div>
 

@@ -19,7 +19,6 @@ const navLinks = [
   {
     name: "Shop",
     href: "https://shop.sqfmi.com/",
-    target: "_blank"
   },
 
 ];
@@ -47,15 +46,15 @@ import brand from "../../assets/brand.svg";
     <!-- Nav Menu -->
     <div
       id="navmenu"
-      class="bg-[#] w-full absolute top-full z-10 xl:static xl:flex xl:flex-grow xl:items-center xl:justify-center overflow-hidden transition-height duration-500 h-0 xl:h-auto"
+      class="bg-black xl:bg-transparent w-full absolute top-full  z-10 xl:static xl:flex xl:flex-grow xl:items-center xl:justify-center overflow-hidden transition-height duration-500 h-0 xl:h-auto "
     >
       <!-- Nav Links -->
-      <ul class="xl:flex xl:flex-grow xl:justify-end xl:gap-10">
+      <ul class="h-[100vh] xl:h-auto xl:flex xl:flex-grow xl:justify-end xl:gap-10 ">
         {
           navLinks.map((link) => {
             return (
               <li class="mx-4 font-light sqfmimenu uppercase p-4 xl:mx-0 px-0">
-                <a id={link.name} href={link.href} target={link.target} class="block" >
+                <a id={link.name} href={link.href} target="_blank" class="block" >
                   {link.name}
                 </a>
               </li>
