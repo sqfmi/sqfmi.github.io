@@ -6,7 +6,7 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
   // add yur domain name here
-  site: 'https://lexingtonthemes.com',
+  site: 'https://sqfmi.github.io',
   compressHTML: true,
   integrations: [sitemap()]
 });
