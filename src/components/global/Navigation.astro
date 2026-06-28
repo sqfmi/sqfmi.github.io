@@ -1,25 +1,29 @@
+---
+import { Image } from "astro:assets";
+import SiteLogo from "@/images/logos/SQFMI_logo.png";
+---
+
 <div class="border-white/20 border-b justify-center w-full">
   <div
     class="text-center items-center w-full gap-2 flex flex-col justify-between md:p-8 md:flex-row"
   >
-    <a
-      href="/"
-      class="text-white font-black uppercase tracking-tight p-4 md:p-0"
-      ><span>ASTROMAX</span>
+    <a href="/" class="p-4 md:p-0">
+      <Image src={SiteLogo} alt="SQUAROFUMI" class="h-8 w-auto" />
     </a>
     <a
-      href="https://github.com/michael-andreuzza/astromax"
+      href="/works"
       class="w-full bg-white duration-200 font-black hover:bg-black hover:text-white lg:ml-auto lg:w-fit px-6 py-4 sm:rounded-full text-black text-center text-xs uppercase"
-      >Github</a
+      >Works</a
     ><a
-      href="https://www.lexingtonthemes.com"
+      href="mailto:woo@sqfmi.com"
       class="w-full bg-white duration-200 font-black hover:bg-black hover:text-white lg:w-fit px-6 py-4 sm:rounded-full text-black text-center text-xs uppercase"
-      >More Astro themes</a
+      >Contact</a
     >
 <a
-      href="https://lexingtonthemes.com/templates/astromaxsp"
+      target="_blank"
+      href="https://shop.sqfmi.com"
       class="w-full bg-orange duration-200 font-black hover:bg-black text-white lg:w-fit px-6 py-4 sm:rounded-full text-black hover:text-white text-center text-xs uppercase"
-      >AstroMax Extended</a
+      >Shop</a
     >
   </div>
 </div>
